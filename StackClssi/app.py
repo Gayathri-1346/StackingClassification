@@ -17,9 +17,8 @@ from sklearn.ensemble import (
 
 from sklearn.metrics import accuracy_score
 
-# --------------------------------------------------
+
 # Paths
-# --------------------------------------------------
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -41,9 +40,7 @@ os.makedirs("model", exist_ok=True)
 
 MODEL_PATH = "model/stacking_classifier.pkl"
 
-# --------------------------------------------------
 # Training
-# --------------------------------------------------
 
 @st.cache_resource
 def train_model():
@@ -135,9 +132,7 @@ def train_model():
 
 model, accuracy = train_model()
 
-# --------------------------------------------------
 # UI
-# --------------------------------------------------
 
 st.title("Heart Disease Prediction")
 st.subheader("Stacking Classifier")
